@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithimetic Submit Button</title>
+</head>
+<body style="background-image: linear-gradient(#F7D060,#917FB3);background-repeat: no-repeat;height: 100vh;">
+<center>
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2" style="font-size: 25px;">Arithimetic Application</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td style="font-size: 25px;">Add First No</td>
+                    <td><input type="text" id="fno" name="fno" value="" size="50"></td>
+                </tr>
+
+                <tr>
+                    <td style="font-size: 25px;">Add Second No</td>
+                    <td><input type="text" id="sno" name="sno" value="" size="50"></td>
+                </tr>
+
+               
+
+                <tr style="text-align: center;">
+                    <td colspan="2">
+                        <input type="button" value="Result" name="Add" onclick="add()">
+                      
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+     <div style="margin-left: 420px;font-size: 25px;">
+        <span>Addition :-</span>      <span id="Add"></span><br><br>
+        <!-- <span>Addition :-</span><span><input type="text" id="Add"></span><br> -->
+        <span>Substraction :-</span>  <span id="Sub"></span><br><br>
+        <span>Multiplication :-</span><span id="Multi"></span><br><br>
+        <span>Division :-</span>      <span id="Div"></span>
+     </div>   
+    </form>
+<script>
+    function add()
+    {
+
+        var a=document.getElementById("fno").value;
+        var b=document.getElementById("sno").value;
+        var c=parseInt(a)+parseInt(b);
+        var d=parseInt(a)-parseInt(b);
+        var e=parseInt(a)*parseInt(b);
+        var f=parseInt(a)/parseInt(b);
+        document.getElementById("Add").innerHTML=c;
+        document.getElementById("Sub").innerHTML=d;
+        document.getElementById("Multi").innerHTML=e;
+        document.getElementById("Div").innerHTML=f;
+
+        if(a==""){
+            document.getElementById("Add").innerHTML="";
+        document.getElementById("Sub").innerHTML="";
+        document.getElementById("Multi").innerHTML="";
+        document.getElementById("Div").innerHTML="";
+
+        alert("enter first no")
+        return false;
+        }
+        if(b==""){
+            document.getElementById("Add").innerHTML="";
+        document.getElementById("Sub").innerHTML="";
+        document.getElementById("Multi").innerHTML="";
+        document.getElementById("Div").innerHTML="";
+        alert("enter second no")
+
+        }
+
+    }
+
+
+    function clear()
+    {
+        document.getElementById("fno").value="";
+        document.getElementById("sno").value="";
+        document.getElementById("ans").value="";
+    }
+</script>
+</body>
+</html>
